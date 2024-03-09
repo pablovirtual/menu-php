@@ -1,4 +1,13 @@
 <?php
+/**
+ * Este archivo PHP se encarga de gestionar la subida de archivos al servidor.
+ * 
+ * Inicia una sesión y verifica si la carpeta "Archivos" existe. Si no existe, la crea.
+ * Luego, establece los permisos de la carpeta "Archivos" a 0777.
+ * 
+ * Si se ha seleccionado un archivo para subir, lo mueve a la carpeta "Archivos" y muestra un mensaje de éxito o error.
+ */
+
 session_start();
 
 if(!file_exists("./Archivos")){
@@ -39,6 +48,8 @@ if (isset($_POST['delete'])) {
     <title>Document</title>
 </head>
 <body>
+
+<!--enlace menu-->
 <div class="enlace">
     <a href="acceso.php">Menu</a>
 </div>

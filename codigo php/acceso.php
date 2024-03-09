@@ -1,10 +1,7 @@
 <?php
 
+// inicio de sesion
 session_start();
-
-
-
-
 
 ?>
 

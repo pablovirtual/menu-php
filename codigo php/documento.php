@@ -1,5 +1,6 @@
 <?php
 
+// inicio de sesion
 session_start();
 
 ?>
@@ -17,6 +18,7 @@ session_start();
 <a href="acceso.php">menu</a>
 </div>
 
+<!--formulario-->
 <div class="formulario">
     <h1>Sube tu Documentos</h1>
 
@@ -25,7 +27,9 @@ session_start();
             <input type="text" name="usuario" id="usuario" required>
             <label for="password">Contraseña</label>
             <input type="password" name="password" id="password" required>
+            <!--archivo-->
             <input type="file" name="archivo" id="archivo" required>
+            <!--boton-->
             <button type="submit" id="form1" value="Enviar">Enviar</button>
     </form>
 </div>
