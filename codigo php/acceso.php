@@ -26,6 +26,7 @@ session_start();
         <ul class="menu">
             <li><a href="documento.php">Sube tus documentos</a></li>
             <li><a href="gestionDocumentos.php">Ver archivos</a></li>
+            <li><a href="generarFormato.php">Generar reporte</a></li>
             <li><a href="cerrarSesion.php">Cerrar Sesion</a></li>
 
         </ul>

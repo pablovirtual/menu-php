@@ -1,6 +1,27 @@
 <?php
 session_start();
 
+//se debera de generar un array con los usuarios y contraseñas y almacenarlos en el archivo usuarios.json
+//se debera de validar que el usuario y contraseña existan en el archivo usuarios.json
+
+$usuarios = array();
+
+if(file_exists('usuarios.json')){
+    $usuarios = json_decode(file_get_contents('usuarios.json'), true);
+}
+
+if(isset($_POST['usuario']) && isset($_POST['password'])){
+    
+    $nuevosUsuarios = array(
+        'usuario' => $_POST['usuario'],
+        'password' => $_POST['password']
+    );
+
+    $usuarios [] = $nuevosUsuarios;
+    $usuariosJson = json_encode($usuarios, JSON_PRETTY_PRINT);
+    file_put_contents('usuarios.json', $usuariosJson);
+}
+
 ?>
 
 <!DOCTYPE html>
